@@ -217,7 +217,9 @@
             <div class="card-body">
               <h3 class="card-title">Tarjeta 1</h3>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, alias! Tempora sapiente, voluptatibus et cum earum veniam doloremque.</p>
-              <a href="#" class="btn btn-info">Mas informacion...</a>
+              <a href="#" class="btn btn-info">Mas info...</a>
+
+              <button type="button" class="btn-tool btn btn-warning mx-2" taga-toggle="tooltip" data-placement="right" title="Si das click sacaras una alerta">Tooltip</button>
             </div>
           </div>
 
@@ -247,6 +249,8 @@
           50%
         </div>
       </div>
+
+      <button type="button" class="btn-tool btn btn-warning mx-2" taga-toggle="tooltip" data-placement="right" title="Si das click sacaras una alerta">Tooltip</button>
 
       <div class="row justify-content-center">
         <nav aria-label="pagination">
@@ -285,6 +289,7 @@
         $(".carousel").carousel({
           interval: 1000
         })
+        $(".btn-tool").tooltip()
       });
       var contador = 0;
       setInterval(function(){
@@ -295,6 +300,8 @@
           barra.innerHTML = contador + '%';
         }
       }, 250)
+
+
     </script>
   </body>
 </html>
