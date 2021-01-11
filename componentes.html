@@ -241,6 +241,13 @@
 
       </div>
 
+      <!--Barra progreso-->
+      <div class="progress my-2">
+        <div id="barra_progreso" class="progress-bar w-0" role="progressbar">
+          50%
+        </div>
+      </div>
+
       <div class="row justify-content-center">
         <nav aria-label="pagination">
           <ul class="pagination">
@@ -261,8 +268,9 @@
             </li>
           </ul>
         </nav>
-
       </div>
+
+
 
 
     </div>
@@ -278,6 +286,15 @@
           interval: 1000
         })
       });
+      var contador = 0;
+      setInterval(function(){
+        if(contador < 100){
+          contador++;
+          var barra = document.querySelector("#barra_progreso");
+          barra.style.width = contador + '%';
+          barra.innerHTML = contador + '%';
+        }
+      }, 250)
     </script>
   </body>
 </html>
