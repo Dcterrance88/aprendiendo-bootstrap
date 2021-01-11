@@ -177,6 +177,10 @@
         </div>
       </div>
 
+      <div class="row col my-5">
+        <button type="button" class="btn-pop btn btn-warning mx-2" taga-toggle="tooltip" data-placement="top" data-container="body" data-content="Si das click sacaras una alerta">Tooltip</button>
+      </div>
+
       <div class="row">
         <div class="col-md-12 mt-3 alert-dismissible fade show">
           <div class="alert alert-warning">
@@ -243,6 +247,61 @@
 
       </div>
 
+
+      <div class="row">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" placeholder="Write your email" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <div class="row my-5">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
       <!--Barra progreso-->
       <div class="progress my-2">
         <div id="barra_progreso" class="progress-bar w-0" role="progressbar">
@@ -250,7 +309,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn-tool btn btn-warning mx-2" taga-toggle="tooltip" data-placement="right" title="Si das click sacaras una alerta">Tooltip</button>
+
 
       <div class="row justify-content-center">
         <nav aria-label="pagination">
@@ -289,7 +348,8 @@
         $(".carousel").carousel({
           interval: 1000
         })
-        $(".btn-tool").tooltip()
+        $(".btn-tool").tooltip();
+        $(".btn-pop").popover();
       });
       var contador = 0;
       setInterval(function(){
